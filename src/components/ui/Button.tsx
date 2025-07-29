@@ -1,5 +1,5 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react';
-import { cn } from '@/app/utils/cn';
+import { cn } from '@/utils/cn';
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   variant?: 'white' | 'black' | 'outline';
@@ -16,7 +16,7 @@ export function Button({
   ...props
 }: ButtonProps) {
   const baseStyles = 'px-4 py-2 font-medium transition-all duration-200 cursor-pointer';
-  
+
   const variants = {
     white: 'bg-white text-black hover:bg-white/90',
     black: 'bg-black text-white hover:bg-black/90',
