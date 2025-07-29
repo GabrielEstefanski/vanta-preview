@@ -1,12 +1,12 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import VantaEffect from './components/ui/VantaEffect';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import Features from './components/Features';
-import TemplatesShowcase from './components/TemplatesShowcase';
-import CallToAction from './components/CallToAction';
+import VantaEffect from '../components/ui/VantaEffect';
+import Header from '../components/Header';
+import HeroSection from '../components/HeroSection';
+import Features from '../components/Features';
+import TemplatesShowcase from '../components/TemplatesShowcase';
+import CallToAction from '../components/CallToAction';
 
 export default function Home() {
   const [mounted, setMounted] = useState(false);

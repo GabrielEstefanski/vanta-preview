@@ -1,4 +1,4 @@
-import { Button } from '@/app/components/ui/Button';
+import { Button } from '@/components/ui/Button';
 
 export default function TemplatesShowcase() {
   const templates = [
@@ -36,7 +36,7 @@ export default function TemplatesShowcase() {
             Escolha entre diferentes estilos e layouts para criar um portfólio que reflita sua identidade profissional
           </p>
         </div>
-  
+
         <div className="mb-24">
           <div className="relative bg-black/50 backdrop-blur-sm border border-white/5 rounded-lg overflow-hidden group hover:border-white/10 transition-all duration-500">
             <div className="relative h-96 overflow-hidden">
@@ -65,7 +65,7 @@ export default function TemplatesShowcase() {
 
         <div className="grid md:grid-cols-3 gap-8">
           {templates.map((template, index) => (
-            <div 
+            <div
               key={template.name}
               className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden hover:border-white/20 transition-all duration-300"
             >
@@ -82,7 +82,7 @@ export default function TemplatesShowcase() {
               <div className="p-6">
                 <h3 className="text-xl font-light tracking-wider text-white mb-2">{template.name}</h3>
                 <p className="text-gray-400 text-sm mb-4 tracking-wider">{template.description}</p>
-                
+
                 <ul className="space-y-2 mb-6">
                   {template.features.map((feature) => (
                     <li key={feature} className="flex items-center text-sm text-gray-400 tracking-wider">
@@ -94,8 +94,8 @@ export default function TemplatesShowcase() {
                   ))}
                 </ul>
 
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   className="w-full bg-white/5 hover:bg-white/10 text-white text-sm py-2 tracking-wider"
                 >
                   Visualizar Template
@@ -106,7 +106,7 @@ export default function TemplatesShowcase() {
         </div>
 
         <div className="text-center mt-12">
-          <Button 
+          <Button
             variant="white"
             className="px-8 py-3 text-sm tracking-wider hover:bg-gray-300"
           >
