@@ -64,7 +64,7 @@ export default function TemplatesShowcase() {
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">
-          {templates.map((template, index) => (
+          {templates.map((template) => (
             <div
               key={template.name}
               className="group relative bg-white/5 backdrop-blur-sm border border-white/10 rounded-lg overflow-hidden hover:border-white/20 transition-all duration-300"

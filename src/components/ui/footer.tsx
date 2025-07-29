@@ -4,7 +4,6 @@ import { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
 export default function Footer() {
-  const [isDark, _setIsDark] = useState(true);
   const [clickCount, setClickCount] = useState(0);
   const [isCooldown, setIsCooldown] = useState(false);
   const [isPermanentlyDisabled, setIsPermanentlyDisabled] = useState(false);
@@ -20,7 +19,7 @@ export default function Footer() {
   }, [isCooldown, isPermanentlyDisabled]);
 
   const handleThemeChange = () => {
-    if (isDark && !isCooldown && !isPermanentlyDisabled) {
+    if (!isCooldown && !isPermanentlyDisabled) {
       setClickCount(prev => {
         const newCount = prev + 1;
         if (newCount >= 3) {
@@ -112,14 +111,15 @@ export default function Footer() {
                 onClick={handleThemeChange}
                 aria-label="Alternar modo escuro"
                 disabled={isCooldown || isPermanentlyDisabled}
-                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none ${isDark ? 'bg-white/20' : 'bg-gray-600'
-                  } ${(isCooldown || isPermanentlyDisabled) ? 'opacity-50 cursor-not-allowed' : ''}`}
+                className={`relative inline-flex h-6 w-11 items-center rounded-full transition-colors focus:outline-none 
+                bg-gray-600 
+                ${(isCooldown || isPermanentlyDisabled) ? 'opacity-50 cursor-not-allowed' : ''}`}
               >
                 <span
-                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform ${isDark ? 'translate-x-6' : 'translate-x-1'
-                    }`}
+                  className={`inline-block h-4 w-4 transform rounded-full bg-white transition-transform translate-x-1`}
                 />
               </button>
+
             </div>
             {clickCount > 0 && (
               <div className="mt-2 text-sm text-gray-400">
