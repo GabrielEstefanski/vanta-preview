@@ -1,7 +1,7 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import VantaEffect from '../components/ui/VantaEffect';
+import VantaEffect from './components/ui/VantaEffect';
 import Header from './components/Header';
 import HeroSection from './components/HeroSection';
 import Features from './components/Features';
@@ -19,7 +19,7 @@ export default function Home() {
     <main className="min-h-screen relative overflow-hidden">
       <VantaEffect />
       <Header />
-      
+
       <div className={`relative z-10 min-h-screen transition-all duration-1000 ${mounted ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
         <HeroSection />
         <Features />
